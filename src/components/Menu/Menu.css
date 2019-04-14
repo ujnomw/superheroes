@@ -1,0 +1,46 @@
+.Menu {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    grid-template-rows: 75px;
+    grid-column-gap: 45px;
+    justify-content: center;
+    justify-items:center;
+    height: 96px;
+    width: 100%;
+    /*position:fixed;*/
+    /*bottom:0;*/
+    /*background: #31333D;*/
+    /*margin-top: -96px;*/
+    /*postion:fixed;*/
+
+}
+.Menu div {
+    margin:0 auto;
+    width: 120px;
+    height: 75px;
+    justify-content:center;
+    text-align: center;
+}
+.dclogo img {
+    margin: auto;
+    display: inline-block;
+    width: 120px;
+    height: 75px;
+}
+
+.marvel img{
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 111px;
+    height: 50px;
+}
+
+.inactive {
+
+}

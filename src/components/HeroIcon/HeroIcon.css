@@ -1,0 +1,40 @@
+.HeroIcon {
+    height: 134px;
+    width: 72px;
+    display: inline;
+}
+.HeroIcon .wrapper {
+    position: absolute;
+}
+.HeroIcon img{
+    height: 100px;
+    width: 72px;
+    border-radius: 8px;
+}
+.HeroIcon span {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: normal;
+    text-align: center;
+    color: #ffffff;
+}
+.counter {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: 72px;
+    left:4px;
+    background: #00C35A;
+    border-radius: 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: normal;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    vertical-align: bottom;
+}

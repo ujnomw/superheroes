@@ -1,0 +1,11 @@
+.SelectedList > div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(16, 72px);
+    /*grid-template-rows: 100px;*/
+    justify-items: center;
+    grid-gap: 16em;
+    text-align: center;
+    justify-content: center;
+    overflow-x: scroll ;
+}

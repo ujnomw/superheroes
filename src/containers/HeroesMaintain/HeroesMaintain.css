@@ -1,0 +1,9 @@
+.HeroesMaintain {
+    flex-grow: 1;
+    background: linear-gradient(180deg, #31333B 13.26%, #363945 74.59%, #2B2D35 100%);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+}

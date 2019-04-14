@@ -1,0 +1,21 @@
+.SearchInput{
+     margin: 20px;
+ }
+.SearchInput input{
+    height: 56px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    background: #4B4E5C;
+    border-radius: 8px;
+    border: 0;
+    color: #ffffff;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+}
+.SearchInput input:focus {
+    outline: none;
+}

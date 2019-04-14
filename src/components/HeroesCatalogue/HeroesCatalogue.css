@@ -1,0 +1,11 @@
+.HeroesCatalogue {
+    width: 100%;
+    hight: 290px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 72px);
+    grid-template-rows: repeat(auto-fill, 134px);
+    justify-items: center;
+    grid-gap: 1em;
+    text-align: center;
+    justify-content: center;
+}
