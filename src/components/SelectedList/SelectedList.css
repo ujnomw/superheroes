@@ -1,11 +1,15 @@
-.SelectedList > div{
-    width: 100%;
+.SelectedList {
+    overflow-x: scroll;
+    /*margin-top: 40px;*/
+    padding-top:40px;
+    width: 100vw;
     display: grid;
-    grid-template-columns: repeat(16, 72px);
-    /*grid-template-rows: 100px;*/
+    grid-template-columns: repeat(4, 20%);
+    /*grid-auto-flow: column;*/
     justify-items: center;
-    grid-gap: 16em;
+    scroll-snap-type: x proximity;
+    grid-auto-flow: column;
+    grid-gap: 1em;
     text-align: center;
     justify-content: center;
-    overflow-x: scroll ;
 }

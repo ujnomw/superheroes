@@ -1,15 +1,22 @@
 .HeroIcon {
     height: 134px;
-    width: 72px;
+    max-width: 72px;
+    min-width: 64px;
     display: inline;
+    z-index: 49;
+    position: relative;
 }
-.HeroIcon .wrapper {
-    position: absolute;
-}
+/*.HeroIcon .wrapper {*/
+    /*position: absolute;*/
+/*}*/
 .HeroIcon img{
     height: 100px;
-    width: 72px;
+    max-width: 72px;
+    min-width: 64px;
     border-radius: 8px;
+    /*position: absolute;*/
+    /*top:0;*/
+    /*left:0;*/
 }
 .HeroIcon span {
     font-family: Roboto;
@@ -19,13 +26,17 @@
     line-height: normal;
     text-align: center;
     color: #ffffff;
+    /*top: 100px;*/
+    /*left: 0;*/
+    /*position: absolute;*/
 }
-.counter {
+
+.HeroIcon .counter {
     position: absolute;
     height: 24px;
     width: 24px;
     top: 72px;
-    left:4px;
+    left: 4px;
     background: #00C35A;
     border-radius: 20px;
     font-family: Roboto;
@@ -36,5 +47,38 @@
     justify-content: center;
     text-align: center;
     color: #FFFFFF;
-    vertical-align: bottom;
+    vertical-align: center;
+    /*z-index: ;*/
+}
+.HeroIcon .counter span {
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+ .close {
+    z-index: 50;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 80%;
+    top: -12px;
+    border-radius: 20px;
+    background: #000000;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    /*opacity: 0.7;*/
+     display: none;
+}
+.HeroIcon:hover .close {
+    display: inline-block;
+}
+.HeroIcon .cross {
+    /*position: relative;*/
+    width: 8px;
+    height: 8px;
+    left: 8px;
+    top: 8px;
+    border: 2px solid #FFFFFF;
 }

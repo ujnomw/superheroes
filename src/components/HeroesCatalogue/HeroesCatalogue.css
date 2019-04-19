@@ -1,11 +1,16 @@
 .HeroesCatalogue {
     width: 100%;
-    hight: 290px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 72px);
-    grid-template-rows: repeat(auto-fill, 134px);
+    grid-template-columns: repeat(auto-fit, 72px);
+    grid-template-rows: repeat(auto-fit, 134px);
     justify-items: center;
-    grid-gap: 1em;
+    grid-gap: 10px;
     text-align: center;
     justify-content: center;
+    /*position: relative;*/
+}
+
+.testcatalogue {
+    width: 100%;
+    background: indianred;
 }

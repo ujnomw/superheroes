@@ -4,6 +4,7 @@ import HeroIcon from '../HeroIcon/HeroIcon'
 
 const HeroesCatalogue = props => {
     return (
+
         <div className={classes.HeroesCatalogue}>
             {
                 props.heroes.map((hero,index) => {

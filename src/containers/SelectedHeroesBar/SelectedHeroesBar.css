@@ -1,18 +1,35 @@
 .SelectedHeroesBar{
     height: 168px;
+    /*position: relative;*/
     width: 100%;
     padding: 0;
     margin: 0;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(180deg, #555761 -51.19%, #2B2D35 100%);
 }
-.SelectedHeroesBar > div{
-    overflow-x: auto;
-    margin-top: 40px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 72px);
-    justify-items: center;
-    grid-gap: 1em;
+.SelectedHeroesBar span {
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: normal;
     text-align: center;
-    justify-content: center;
+
+    color: #4B4E5C;
 }
+/*.SelectedHeroesBar > div{*/
+    /*overflow-x: auto;*/
+    /*!*margin-top: 40px;*!*/
+    /*padding-top:40px;*/
+    /*width: 100%;*/
+    /*display: grid;*/
+    /*grid-template-columns: repeat(auto-fill, 72px);*/
+    /*justify-items: center;*/
+    /*grid-gap: 1em;*/
+    /*text-align: center;*/
+    /*justify-content: center;*/
+/*}*/

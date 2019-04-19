@@ -9,6 +9,7 @@ import {onHeroClick, onSearchChange, onSwitchUniverse} from "../../store/actions
 class HeroesMaintain extends Component {
     render() {
         return (
+
             <div className={classes.HeroesMaintain}>
                 <SearchInput
                     onChange = {this.props.onSearchChange}

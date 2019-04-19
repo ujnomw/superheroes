@@ -1,4 +1,7 @@
-import {CHANGE_SELECTED, SEARCH_CHANGE, SWITCH_UNIVERSE, TEST_ACTION} from './actionTypes'
+import {
+    ADD_NEW_HERO, CHANGE_SELECTED, INCREASE_HERO_COUNTER, SEARCH_CHANGE, SWITCH_UNIVERSE,
+    TEST_ACTION
+} from './actionTypes'
 export function onSearchChange(event) {
     return (dispatch, getState) => {
         const state = getState().maintain
@@ -24,26 +27,35 @@ export function changingSet(newSet) {
 }
 export function onHeroClick(id) {
     return (dispatch, getState) => {
-        let selectedHeros = getState().selected.heroes
-        const newHero = {
-            ...getState().maintain.activeHeroes[id],
-            count: 1
+        //const selectedHeroes = getState().maintain.selectedHeroes
+        // const newHero = {
+        //     ...getState().maintain.activeHeroes[id],
+        //     count: 1
+        // }
+        const hero = getState().maintain.activeHeroes[id]
+        const counters = getState().selected.counter
+        if (counters.hasOwnProperty(hero.name)){
+            dispatch(increaseHeroCounter(hero.name))
         }
-        let isNewAdded = true
-        selectedHeros.forEach((hero, index) => {
-            if (hero.name === newHero.name){
-                selectedHeros[index].count += 1
-                isNewAdded = false
-            }
-        })
-        selectedHeros = isNewAdded ? selectedHeros.concat(newHero) : selectedHeros
-        dispatch(changeSelected(selectedHeros))
+        else {
+            dispatch(addNewHero(hero))
+        }
+        // let isNewAdded = true
+        // let
+        // selectedHeroes.forEach((hero, index) => {
+        //     if (hero.name === newHero.name){
+        //         selectedHeroes[index].count += 1
+        //         isNewAdded = false
+        //     }
+        // })
+        // selectedHeroes = isNewAdded ? selectedHeroes.concat(newHero) : selectedHeroes
+        // dispatch(changeSelected(selectedHeroes))
     }
 }
-export function changeSelected(heroes) {
+export function changeSelected(selectedHeroes) {
     return {
         type: CHANGE_SELECTED,
-        heroes
+        selectedHeroes
     }
 }
 export function onSwitchUniverse() {
@@ -59,5 +71,17 @@ export function universeSwitch(isDC, activeHeroes) {
         type: SWITCH_UNIVERSE,
         isDC,
         activeHeroes
+    }
+}
+export function addNewHero(hero) {
+    return {
+        type: ADD_NEW_HERO,
+        hero
+    }
+}
+export function increaseHeroCounter(name) {
+    return {
+        type: INCREASE_HERO_COUNTER,
+        name
     }
 }

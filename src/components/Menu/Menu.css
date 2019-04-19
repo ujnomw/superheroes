@@ -10,7 +10,7 @@
     width: 100%;
     /*position:fixed;*/
     /*bottom:0;*/
-    /*background: #31333D;*/
+    background: #31333D;
     /*margin-top: -96px;*/
     /*postion:fixed;*/
 
@@ -42,5 +42,5 @@
 }
 
 .inactive {
-
+    opacity: 0.2;
 }
