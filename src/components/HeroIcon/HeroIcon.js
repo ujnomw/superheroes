@@ -7,7 +7,7 @@ const HeroIcon = props => {
             { props.close
                 ? <div
                     className={classes.close}
-                    onClick={() => props.onCloseClick(props.id)}
+                    onClick={() => props.onCloseClick(props.id, props.count)}
                 />
 
                 : null

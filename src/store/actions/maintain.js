@@ -28,8 +28,8 @@ export function changingSet(newSet) {
 export function onHeroClick(id) {
     return (dispatch, getState) => {
         const hero = getState().maintain.activeHeroes[id]
-        const counters = getState().selected.counter
-        if (counters.hasOwnProperty(hero.name)){
+        const ids = getState().selected.ids
+        if (ids.includes(hero.name)){
             dispatch(increaseHeroCounter(hero.name))
         }
         else {

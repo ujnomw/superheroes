@@ -1,4 +1,4 @@
-import {ADD_NEW_HERO, INCREASE_HERO_COUNTER, DECREASE_HERO_COUNTER} from "../actions/actionTypes";
+import {ADD_NEW_HERO, INCREASE_HERO_COUNTER, DECREASE_HERO_COUNTER, DELETE_SELECTED_HERO} from "../actions/actionTypes";
 const initialState = {
     // id = name
     images: {}, // {id: imageURL}
@@ -33,6 +33,13 @@ export default function selectedReducer(state = initialState, action) {
             return {
                 ...state,
                 counter: counter
+            }
+        case DELETE_SELECTED_HERO:
+            const ids = state.ids.concat()
+            ids.splice(action.id, 1)
+            return {
+                ...state,
+                ids
             }
         default:
             return state

@@ -42,7 +42,7 @@ function mapStateToPros(state) {
 }
 function mapDispatchToProps(dispatch) {
     return {
-        onCloseClick: id => dispatch(onCloseClick(id))
+        onCloseClick: (id,count) => dispatch(onCloseClick(id, count))
     }
 }
 export default connect(mapStateToPros, mapDispatchToProps)(SelectedHeroesBar);
