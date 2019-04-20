@@ -1,16 +1,15 @@
 .HeroesCatalogue {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 72px);
+    grid-template-columns: repeat(auto-fill, minmax(64px, 72px));
     grid-template-rows: repeat(auto-fill, 134px);
-    grid-gap: 10px;
+    grid-gap: 1em;
     justify-content: center;
     grid-area: catalogue;
 }
-.HeroesCatalogue:first-child {
-    /*grid-column-start: 1;*/
-}
-.testcatalogue {
-    width: 100%;
-    background: indianred;
+
+@media (max-width: 320px) {
+    .HeroesCatalogue {
+        grid-gap: 8px;
+    }
 }

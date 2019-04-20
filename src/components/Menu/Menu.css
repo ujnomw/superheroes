@@ -5,16 +5,10 @@
     grid-template-rows: 75px;
     grid-column-gap: 45px;
     justify-content: center;
-    /*justify-items:center;*/
     align-content: center;
     height: 96px;
     width: 100%;
-    /*position:fixed;*/
-    /*bottom:0;*/
     background: #31333D;
-    /*margin-top: -96px;*/
-    /*postion:fixed;*/
-
     grid-area: menu;
 }
 .Menu div {
@@ -36,7 +30,6 @@
     position: relative;
     top: 50%;
     left: 50%;
-
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 111px;

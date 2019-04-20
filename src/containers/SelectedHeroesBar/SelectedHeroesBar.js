@@ -3,6 +3,7 @@ import classes from './SelectedHeroesBar.css'
 import SelectedList from '../../components/SelectedList/SelectedList'
 import {connect} from 'react-redux'
 import Message from '../../components/Message/Message'
+import {onCloseClick} from "../../store/actions/selected";
 
 class SelectedHeroesBar extends Component {
     getListOfHeroes = () => {
@@ -22,6 +23,7 @@ class SelectedHeroesBar extends Component {
                 {   this.props.heroes.length
                     ? <SelectedList
                      heroesToDisplay = {this.getListOfHeroes()}
+                     onCloseClick={this.props.onCloseClick}
                     />
                     : <Message text="Выберите героя"/>
                 }
@@ -38,4 +40,9 @@ function mapStateToPros(state) {
         counter: state.selected.counter
     }
 }
-export default connect(mapStateToPros, null)(SelectedHeroesBar);
+function mapDispatchToProps(dispatch) {
+    return {
+        onCloseClick: id => dispatch(onCloseClick(id))
+    }
+}
+export default connect(mapStateToPros, mapDispatchToProps)(SelectedHeroesBar);

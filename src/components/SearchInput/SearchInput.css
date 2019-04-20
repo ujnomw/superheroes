@@ -10,7 +10,6 @@
     top: 0px;
     width: 100%;
     border-radius: 8px;
-
 }
 .SearchInput form,
 .SearchInput input {
@@ -35,7 +34,6 @@
     height: 24px;
     right: 15px;
     top: 16px;
-
 }
 
 .SearchInput input:focus {

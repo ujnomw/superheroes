@@ -1,5 +1,5 @@
 import data from '../../static/superheroes.json'
-import {CHANGE_SELECTED, SEARCH_CHANGE, SWITCH_UNIVERSE} from "../actions/actionTypes";
+import { SEARCH_CHANGE, SWITCH_UNIVERSE} from "../actions/actionTypes";
 const initialState = {
     superheroes: data,
     activeHeroes: data.dc,
@@ -16,11 +16,6 @@ export default function maintainReducer(state = initialState, action){
                 activeHeroes: action.activeHeroes,
                 resetSearch: false
             }
-        // case CHANGE_SELECTED:
-        //     return{
-        //         ...state,
-        //         selectedHeroes: action.selectedHeroes
-        //     }
         case SWITCH_UNIVERSE:{
             return {
                 ...state,

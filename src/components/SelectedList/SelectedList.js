@@ -12,7 +12,7 @@ const SelectedList = props => {
                         key={hero.name + index}
                         heroURL={hero.image}
                         name = {null}
-                        onHeroClick = {null}
+                        onCloseClick = {props.onCloseClick}
                         id = {index}
                         count={hero.count}
                         close = {true}

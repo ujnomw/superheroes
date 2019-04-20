@@ -1,7 +1,7 @@
 import {
-    ADD_NEW_HERO, CHANGE_SELECTED, INCREASE_HERO_COUNTER, SEARCH_CHANGE, SWITCH_UNIVERSE,
-    TEST_ACTION
+    ADD_NEW_HERO, CHANGE_SELECTED, INCREASE_HERO_COUNTER, SEARCH_CHANGE, SWITCH_UNIVERSE
 } from './actionTypes'
+
 export function onSearchChange(event) {
     return (dispatch, getState) => {
         const state = getState().maintain
@@ -27,11 +27,6 @@ export function changingSet(newSet) {
 }
 export function onHeroClick(id) {
     return (dispatch, getState) => {
-        //const selectedHeroes = getState().maintain.selectedHeroes
-        // const newHero = {
-        //     ...getState().maintain.activeHeroes[id],
-        //     count: 1
-        // }
         const hero = getState().maintain.activeHeroes[id]
         const counters = getState().selected.counter
         if (counters.hasOwnProperty(hero.name)){
@@ -40,16 +35,6 @@ export function onHeroClick(id) {
         else {
             dispatch(addNewHero(hero))
         }
-        // let isNewAdded = true
-        // let
-        // selectedHeroes.forEach((hero, index) => {
-        //     if (hero.name === newHero.name){
-        //         selectedHeroes[index].count += 1
-        //         isNewAdded = false
-        //     }
-        // })
-        // selectedHeroes = isNewAdded ? selectedHeroes.concat(newHero) : selectedHeroes
-        // dispatch(changeSelected(selectedHeroes))
     }
 }
 export function changeSelected(selectedHeroes) {
@@ -63,7 +48,6 @@ export function onSwitchUniverse() {
         const isDC = !getState().maintain.isDC
         const activeHeroes = isDC ? getState().maintain.superheroes.dc : getState().maintain.superheroes.marvel
         dispatch(universeSwitch(isDC, activeHeroes))
-
     }
 }
 export function universeSwitch(isDC, activeHeroes) {
