@@ -6,7 +6,6 @@ const state = {
 }
 const resetForm = isReset => {
     if (isReset && state.formRef){
-        console.log(state.formRef)
         state.formRef.reset()
     }
 }

@@ -3,9 +3,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, 72px);
     grid-template-rows: repeat(auto-fit, 134px);
-    justify-items: center;
+    /*justify-items: center;*/
     grid-gap: 10px;
-    text-align: center;
+    /*text-align: center;*/
     justify-content: center;
     /*position: relative;*/
 }

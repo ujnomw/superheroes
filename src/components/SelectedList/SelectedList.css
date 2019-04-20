@@ -1,15 +1,17 @@
 .SelectedList {
     overflow-x: scroll;
-    /*margin-top: 40px;*/
     padding-top:40px;
     width: 100vw;
     display: grid;
-    grid-template-columns: repeat(4, 20%);
-    /*grid-auto-flow: column;*/
-    justify-items: center;
-    scroll-snap-type: x proximity;
+    grid-template-columns: 10px;
+    grid-auto-columns: 72px;
     grid-auto-flow: column;
+    scroll-snap-type: x proximity;
     grid-gap: 1em;
-    text-align: center;
-    justify-content: center;
+}
+
+.SelectedList:before,
+.SelectedList:after {
+    content: '';
+    width: 10px;
 }
