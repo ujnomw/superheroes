@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './SearchInput.css'
-
+import icon from '../../static/icon-loupe.png'
 const state = {
     formRef: null
 }
@@ -17,9 +17,10 @@ const SearchInput = props => {
                 <input
 
                     type="text"
-                    placeholder ='gecnf'
+                    placeholder ='Имя героя'
                     onChange={props.onChange}
                 />
+                <img src={icon} alt="" className={classes.icon}/>
             </form>
 
         </div>

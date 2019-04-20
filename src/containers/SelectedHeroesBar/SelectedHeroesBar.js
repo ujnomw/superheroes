@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import classes from './SelectedHeroesBar.css'
 import SelectedList from '../../components/SelectedList/SelectedList'
 import {connect} from 'react-redux'
+import Message from '../../components/Message/Message'
 
 class SelectedHeroesBar extends Component {
     getListOfHeroes = () => {
@@ -22,7 +23,7 @@ class SelectedHeroesBar extends Component {
                     ? <SelectedList
                      heroesToDisplay = {this.getListOfHeroes()}
                     />
-                    : <span>Выберите героя</span>
+                    : <Message text="Выберите героя"/>
                 }
             </div>
         )

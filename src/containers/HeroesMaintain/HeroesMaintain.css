@@ -1,13 +1,30 @@
 .HeroesMaintain {
-    flex-grow: 1;
     background: linear-gradient(180deg, #31333B 13.26%, #363945 74.59%, #2B2D35 100%);
     width: 100%;
     height: 100%;
     margin: 0;
-    /*display: flex;*/
-    /*flex-direction: column;*/
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 96px 1fr 96px;
-    /*position: relative;*/
+    /*align-items: center;*/
+    grid-template-areas:
+            "search-input"
+            "catalogue"
+            "menu"
+            ;
+}
+.HeroesMaintain .msg {
+    /*top:0;*/
+    /*align-self: center;*/
+}
+
+@media (min-width: 700px) {
+    .HeroesMaintain {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 96px 1fr;
+        grid-template-areas:
+                "search-input menu"
+                "catalogue catalogue"
+    ;
+    }
 }

@@ -1,14 +1,20 @@
 .SearchInput{
      margin: 20px;
+    grid-area: search-input;
  }
-.SearchInput input{
+.SearchInput form{
+    position: relative;
     height: 56px;
     left: 0px;
     right: 0px;
     top: 0px;
     width: 100%;
-    background: #4B4E5C;
     border-radius: 8px;
+
+}
+.SearchInput form,
+.SearchInput input {
+    background: #4B4E5C;
     border: 0;
     color: #ffffff;
     font-family: Roboto;
@@ -16,6 +22,22 @@
     font-weight: normal;
     font-size: 16px;
 }
+.SearchInput input {
+    position: absolute;
+    left: 14px;
+    right: 49px;
+    top: 33.93%;
+    bottom: 32.14%;
+}
+.SearchInput .icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 15px;
+    top: 16px;
+
+}
+
 .SearchInput input:focus {
     outline: none;
 }

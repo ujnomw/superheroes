@@ -8,7 +8,6 @@ const HeroIcon = props => {
         <div className={classes.HeroIcon }>
             { props.close
                 ? <div className={classes.close}>
-                    {/*<img className={classes.cross} src={cross} alt=""/>*/}
                 </div>
                 : null
             }

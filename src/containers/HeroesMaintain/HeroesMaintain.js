@@ -5,6 +5,7 @@ import HeroesCatalogue from '../../components/HeroesCatalogue/HeroesCatalogue'
 import Menu from '../../components/Menu/Menu'
 import {connect} from 'react-redux'
 import {onHeroClick, onSearchChange, onSwitchUniverse} from "../../store/actions/maintain";
+import Message from '../../components/Message/Message'
 
 class HeroesMaintain extends Component {
     render() {
@@ -15,10 +16,18 @@ class HeroesMaintain extends Component {
                     onChange = {this.props.onSearchChange}
                     resetSearch = {this.props.resetSearch}
                 />
-                <HeroesCatalogue
+                {
+                    this.props.activeHeroes.length
+                   ? <HeroesCatalogue
                     heroes= {this.props.activeHeroes}
                     onHeroClick={this.props.onHeroClick}
-                />
+                    />
+                   : <div className={classes.msg}>
+                        <Message
+                            text="Ничего не найдено"
+                        />
+                    </div>
+                }
                 <Menu
                     onSwitch={this.props.onSwitchUniverse}
                     isDC = {this.props.isDC}
