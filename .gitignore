@@ -21,6 +21,11 @@
 # idea
 .idea/
 
+#firebase hosting
+
+.firebase*
+firebase.json
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
